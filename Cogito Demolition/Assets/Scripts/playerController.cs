@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour {
 
+
     public float speed = 10f;
     public float maxSpeed = 20f;
     public float jump = 5f;
     private bool IsGrounded;
+
+    private SpriteRenderer spriteR;
 
     private Rigidbody2D rb2d;
     // Use this for initialization
@@ -15,6 +18,7 @@ public class playerController : MonoBehaviour {
     {
         rb2d = GetComponent<Rigidbody2D>();
         IsGrounded = true;
+        spriteR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -40,6 +44,17 @@ public class playerController : MonoBehaviour {
             rb2d.velocity = new Vector2(rb2d.velocity.x, jump);
             IsGrounded = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+
+            spriteR.flipX = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            spriteR.flipX = false;
+        }
+
     }
 
     void fixedUpdate()
@@ -61,5 +76,15 @@ public class playerController : MonoBehaviour {
         }
 
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<Collider2D>().tag == "coin")
+        {
+            Destroy(collision.gameObject);
+            GameManagerController.score += 3;
+        }
+    }
+
 
 }
