@@ -10,6 +10,8 @@ public class playerController : MonoBehaviour {
     public float jump = 5f;
     private bool IsGrounded;
 
+    public Animator animator;
+
     private SpriteRenderer spriteR;
 
     private Rigidbody2D rb2d;
@@ -19,6 +21,7 @@ public class playerController : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         IsGrounded = true;
         spriteR = GetComponent<SpriteRenderer>();
+     
     }
 
     // Update is called once per frame
@@ -27,6 +30,8 @@ public class playerController : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
 
         rb2d.AddForce(Vector2.right * speed * h);
+
+        animator.SetFloat("speed", Mathf.Abs(h*speed));
 
         if (rb2d.velocity.x > maxSpeed)
         {

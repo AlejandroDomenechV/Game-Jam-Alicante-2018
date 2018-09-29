@@ -2246,6 +2246,7 @@ MonoBehaviour:
   speed: 30
   maxSpeed: 20
   jump: 10
+  animator: {fileID: 1638949608}
 --- !u!212 &1638949604
 SpriteRenderer:
   m_ObjectHideFlags: 0
