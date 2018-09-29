@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class platformController : MonoBehaviour {
 
-    public int velocity = 5;
+    public float velocity = 5;
     public float posX = 6.0f;
-    public float maxRangeX = 12.4f;
-    public float minRangeX = -2.5f;
+    public float maxRangeX = 4.3f;
+    public float minRangeX = -9.0f;
 
 
     // Use this for initialization
