@@ -18,7 +18,7 @@ public class GameOverManager : MonoBehaviour {
         print("El tiempo: " + Time.timeSinceLevelLoad);
         print("El piso: " + GameManagerController.platformCount);
         score.text = string.Format("{0}", GameManagerController.score);
-        time.text = string.Format("{0}", Mathf.Abs(GameManagerController.time));
+        time.text = string.Format("{0:00.00}", Mathf.Abs(GameManagerController.time));
         platformCount.text = string.Format("{0}", GameManagerController.platformCount);
 
 
