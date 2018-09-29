@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManagerController : MonoBehaviour {
 
     public static int score = 0;
+    public static int highScore = 0;
 
     public static int platformCount = 1;
     public int velTimer = 0;
