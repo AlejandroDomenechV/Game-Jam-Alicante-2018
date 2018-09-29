@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour {
 
@@ -79,6 +80,7 @@ public class playerController : MonoBehaviour {
             IsGrounded = true;
             Debug.Log(IsGrounded);
         }
+        
 
     }
 
@@ -88,6 +90,11 @@ public class playerController : MonoBehaviour {
         {
             Destroy(collision.gameObject);
             GameManagerController.score += 3;
+        }
+        if (collision.transform.tag == "Finish")
+        {
+           
+            SceneManager.LoadScene("game over");
         }
     }
 

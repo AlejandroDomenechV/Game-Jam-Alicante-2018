@@ -6,10 +6,10 @@ public class GameManagerController : MonoBehaviour {
 
     public static int score = 0;
 
-    public int platformCount = 1;
+    public static int platformCount = 1;
     public int velTimer = 0;
 
-    float time = 20.0f;
+    public static float time = 20.0f;
 
     private float platformTimer = 2.0f;
     public float timeForPlatform = .75f;

@@ -15,7 +15,7 @@ public class HudManagerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        time.text = string.Format("{0:00.00} seg.", Time.time);
+        time.text = string.Format("{0:00.00} seg.", Time.timeSinceLevelLoad);
         score.text = string.Format("score: {0}", GameManagerController.score);
 	}
 }
