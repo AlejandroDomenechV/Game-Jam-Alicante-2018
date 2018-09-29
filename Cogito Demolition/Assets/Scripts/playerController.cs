@@ -93,7 +93,7 @@ public class playerController : MonoBehaviour {
         }
         if (collision.transform.tag == "Finish")
         {
-           
+            GameManagerController.time = Time.timeSinceLevelLoad;
             SceneManager.LoadScene("game over");
         }
     }
