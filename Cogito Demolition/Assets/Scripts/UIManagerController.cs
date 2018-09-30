@@ -30,4 +30,8 @@ public class UIManagerController : MonoBehaviour {
     {
         SceneManager.LoadScene("main menu");
     }
+    public void goToCredits()
+    {
+        SceneManager.LoadScene("credits");
+    }
 }
