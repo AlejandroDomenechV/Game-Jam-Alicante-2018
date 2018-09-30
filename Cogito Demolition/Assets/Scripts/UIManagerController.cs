@@ -14,7 +14,9 @@ public class UIManagerController : MonoBehaviour {
 	void Update () {
 		
 	}
-
+    public void startCinematica() {
+        SceneManager.LoadScene("Cinematica");
+    }
     public void startGame()
     {
         GameManagerController.score = 0;
