@@ -55,15 +55,17 @@ public class playerController : MonoBehaviour {
             IsGrounded = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || (Input.GetAxis("Horizontal") > 0.10))
         {
 
             spriteR.flipX = true;
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || (Input.GetAxis("Horizontal") < 0))
         {
             spriteR.flipX = false;
         }
+
+        Debug.Log(Input.GetAxis("Horizontal"));
 
     }
 

@@ -12,7 +12,7 @@ public class CreaditsManagerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKey(KeyCode.Escape))
+		if(Input.GetKey(KeyCode.Escape) || Input.GetButtonDown("Cancel"))
         {
             SceneManager.LoadScene("main menu");
         }
