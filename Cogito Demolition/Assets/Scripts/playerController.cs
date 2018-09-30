@@ -102,6 +102,10 @@ public class playerController : MonoBehaviour {
             GameManagerController.time = Time.timeSinceLevelLoad;
             SceneManager.LoadScene("game over");
         }
+
+        if (collision.GetComponent<Collider2D>().tag == "enemy") {
+            rb2d.AddForce(new Vector2(-10f,0f));
+        }
     }
 
 
