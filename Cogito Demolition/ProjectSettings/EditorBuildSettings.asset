@@ -14,10 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/game over.unity
     guid: f7a77dc5155c2d24eb0327ca851d111b
-    path: Assets/credits.unity
-    guid: efadccb46f721974a86c45fd7c2ca6d3
   - enabled: 1
     path: Assets/win.unity
     guid: 84a8621237d0203458f50eec6621a65f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/credits.unity
+    guid: efadccb46f721974a86c45fd7c2ca6d3
+  - enabled: 1
+    path: Assets/Cinematica.unity
+    guid: 74954c63f4acca44ab404e65a6cfc022
   m_configObjects: {}
