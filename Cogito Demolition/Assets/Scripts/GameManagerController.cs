@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerController : MonoBehaviour {
 
@@ -25,10 +26,16 @@ public class GameManagerController : MonoBehaviour {
         platformTimer = timeForPlatform;
     }
 	
+    
 	// Update is called once per frame
 	void Update ()
     {
         checkTimer();
+
+        if(platformCount > 30)
+        {
+            SceneManager.LoadScene("win");
+        }
 
 	}
 
