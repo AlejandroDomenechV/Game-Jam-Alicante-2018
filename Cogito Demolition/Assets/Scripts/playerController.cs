@@ -10,6 +10,11 @@ public class playerController : MonoBehaviour {
     public float maxSpeed = 20f;
     public float jump = 5f;
     private bool IsGrounded;
+    private int contbullets;
+
+    public Transform firePoint;
+    public GameObject bulletPreFab;
+    public bool isFacingRight;
 
     public Animator animator;
 
@@ -26,6 +31,8 @@ public class playerController : MonoBehaviour {
         IsGrounded = true;
         spriteR = GetComponent<SpriteRenderer>();
         fuenteAudio = GetComponent<AudioSource>();
+        contbullets = 3;
+        isFacingRight = true;
      
     }
 
@@ -55,18 +62,30 @@ public class playerController : MonoBehaviour {
             IsGrounded = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) || (Input.GetAxis("Horizontal") > 0.10))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && !isFacingRight)
         {
-
-            spriteR.flipX = true;
+            isFacingRight = true;
+            //spriteR.flipX = true;
+            transform.Rotate(0f, 180f, 0f);
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) || (Input.GetAxis("Horizontal") < 0))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && isFacingRight)
         {
-            spriteR.flipX = false;
+            isFacingRight = false;
+            //spriteR.flipX = false;
+            transform.Rotate(0f, 180f, 0f);
+        }
+        if(Input.GetKeyDown(KeyCode.Space) && contbullets > 0)
+        {
+            contbullets--;
+            Shoot();
         }
 
         Debug.Log(Input.GetAxis("Horizontal"));
 
+    }
+    void Shoot()
+    {
+        Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
     }
 
     void fixedUpdate()

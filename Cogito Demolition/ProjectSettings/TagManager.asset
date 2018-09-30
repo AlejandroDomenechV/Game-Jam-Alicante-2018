@@ -9,6 +9,12 @@ TagManager:
   - coin
   - bomba
   - enemy
+  - play_buton
+  - credits_button
+  - quit_button
+  - replay_button
+  - menu_button
+  - play_button
   layers:
   - Default
   - TransparentFX

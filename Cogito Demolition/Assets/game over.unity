@@ -1435,6 +1435,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1269275435}
+    - target: {fileID: 1463694751722788, guid: 6d7449dec5a382d4bacff1c05488fb24, type: 2}
+      propertyPath: m_TagString
+      value: replay_button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7449dec5a382d4bacff1c05488fb24, type: 2}
   m_IsPrefabAsset: 0
@@ -2167,6 +2171,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1269275435}
+    - target: {fileID: 1814780030231660, guid: 717ee43555be93c4f841d930bb1b8d99, type: 2}
+      propertyPath: m_TagString
+      value: menu_button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 717ee43555be93c4f841d930bb1b8d99, type: 2}
   m_IsPrefabAsset: 0
