@@ -62,19 +62,19 @@ public class playerController : MonoBehaviour {
             IsGrounded = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && !isFacingRight)
+        if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0.10) && !isFacingRight)
         {
             isFacingRight = true;
             //spriteR.flipX = true;
             transform.Rotate(0f, 180f, 0f);
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) && isFacingRight)
+        else if ((Input.GetKeyDown(KeyCode.LeftArrow) ||Input.GetAxis("Horizontal") < 0) && isFacingRight)
         {
             isFacingRight = false;
             //spriteR.flipX = false;
             transform.Rotate(0f, 180f, 0f);
         }
-        if(Input.GetKeyDown(KeyCode.Space) && contbullets > 0)
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump")) && contbullets > 0)
         {
             contbullets--;
             Shoot();
