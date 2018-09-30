@@ -1068,7 +1068,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 9.6}
+    oldSize: {x: 10, y: 10}
     newSize: {x: 0.94, y: 0.94}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1106,12 +1106,30 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &394518603
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394518597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39a0e99f19746ee4eb40fcba417cde23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &401450886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,11 +2603,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4996735425433740, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 48.61
+      value: 46.49
       objectReference: {fileID: 0}
     - target: {fileID: 4996735425433740, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.07
+      value: 2.08
       objectReference: {fileID: 0}
     - target: {fileID: 4996735425433740, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2597,25 +2615,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4996735425433740, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.59999996
+      value: 0.57376003
       objectReference: {fileID: 0}
     - target: {fileID: 4996735425433740, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.59999996
+      value: 0.57376003
       objectReference: {fileID: 0}
     - target: {fileID: 4996735425433740, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.9125336
       objectReference: {fileID: 0}
     - target: {fileID: 212514254077030752, guid: 01b8ca954563f244bb0c00edbc7ff491,
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 76c618cee4e94a6499631a4fc3f7e4d5,
+      objectReference: {fileID: 21300000, guid: 78a76533391ce6941bf2f4ac37e99f7a,
         type: 3}
     - target: {fileID: 1503945813473842, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503945813473842, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b8ca954563f244bb0c00edbc7ff491, type: 2}
@@ -2812,7 +2834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   maxSpeed: 10
-  jump: 10
+  jump: 1.32
   animator: {fileID: 1638949608}
   coinSound: {fileID: 8300000, guid: 192afea2531931c4496b9f1989995a60, type: 3}
 --- !u!212 &1638949604
@@ -2849,7 +2871,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 4593185b6ab6d7b4bbd20e51bea29037, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
