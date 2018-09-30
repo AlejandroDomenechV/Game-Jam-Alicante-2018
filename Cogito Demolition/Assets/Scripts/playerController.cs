@@ -16,12 +16,16 @@ public class playerController : MonoBehaviour {
     private SpriteRenderer spriteR;
 
     private Rigidbody2D rb2d;
+
+    public AudioClip coinSound;
+    private AudioSource fuenteAudio;
     // Use this for initialization
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         IsGrounded = true;
         spriteR = GetComponent<SpriteRenderer>();
+        fuenteAudio = GetComponent<AudioSource>();
      
     }
 
@@ -90,6 +94,8 @@ public class playerController : MonoBehaviour {
         {
             Destroy(collision.gameObject);
             GameManagerController.score += 3;
+            fuenteAudio.clip = coinSound;
+            fuenteAudio.Play();
         }
         if (collision.transform.tag == "Finish")
         {
